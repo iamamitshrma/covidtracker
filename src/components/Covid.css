@@ -1,0 +1,125 @@
+@keyframes blinker {  
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes hover {
+        
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+section{
+    background-color: black;
+    color: white;
+    height: 100vh;
+}
+
+h1{
+    padding-top: 20px;
+    font-size: 12px;
+    animation: blinker 1.5s cubic-bezier(.5, 0, 1, 1) infinite alternate;
+}
+
+h1, h2{
+    text-align: center;
+}
+ul{
+    text-align: center;
+}
+span{
+    font-size: 10px;
+}
+.card {
+    display: inline-block;
+    width: 25vw;
+    height: 30vh;
+    min-height: 30vh;
+    margin-top: 50px;
+    align-content: center;
+}
+.card:nth-child(1){
+    background-color: #5c5cff;
+    margin-right: 15px;
+}
+.card:nth-child(2){
+    background-color: green;
+    margin-right: 15px;
+}
+.card:nth-child(3){
+    background-color: skyblue;
+}
+.card:nth-child(4){
+    background-color: yellowgreen;
+    margin-right: 15px;
+}
+.card:nth-child(5){
+    background-color: orangered;
+    margin-right: 15px;
+}
+.card:nth-child(6){
+    background-color: #5c5cff;
+}
+
+.card:focus,
+.card:hover{
+    transform: scale(1.1);
+    transition-duration: 1s;
+}
+
+.card-main{
+    margin-top: 10px;
+}
+.card-name{
+    font-size: 20px;
+}
+.card-total{
+    font-size: 35px;
+    margin-top: 20px;
+    text-shadow: black 7px 11px 9px;
+}
+
+@media all and (max-width: 1200px) {
+    .card-name{
+        font-size: 15px;
+    }
+    .card-total{
+        font-size: 25px;
+    }   
+}
+
+@media all and (max-width: 850px) {
+    section{
+        height: 100%;
+    }
+    .card{
+        width: 35vw;
+    }
+    .card:nth-child(3){
+        margin-right: 15px;
+    }
+    .card:nth-child(6){
+        margin-right: 15px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    section{
+        height: 100%;
+    }
+    .card {
+        width: 70vw;
+        height: 200px;
+    }
+    .card-name{
+        font-size: 20px;
+        margin-top: 50px;
+    }
+    .card-total{
+        font-size: 30px;
+    } 
+}
